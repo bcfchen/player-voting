@@ -1,7 +1,7 @@
 @import "../node_modules/toastr/build/toastr.min.css";
 @import "../node_modules/react-select/dist/react-select.css";
 @import "styles/layout/playersGrid.scss";
-
+@import "styles/layout/playerCard.scss";
 
 html {
     background-color:#2f353d;
@@ -11,4 +11,5 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #ededed;
+    text-align: center;
 }

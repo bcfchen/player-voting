@@ -6,7 +6,12 @@ const PlayerCard = ({player, isVoted, allowMoreVotes, onPlayerClicked, isVotingE
     : () => onPlayerClicked(player.participantId);
 
     return (<div className='player-card-container'>
-    <img className={itemClass} src={player.avatarUrl} onClick={clickHandler} />
+        {!isVotingEnded && <div className='voting-percent-indicator'>
+            <span>5.48%</span>
+        </div>}
+        <img className={itemClass} src={player.avatarUrl} onClick={clickHandler} />
+        <span>{player.nickname}</span>
+        <p>{player.message}</p>
     </div>);
 };
 

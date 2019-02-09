@@ -1,0 +1,7 @@
+.voting-percent-indicator {
+  background-color: #d8d8d8;
+  color: black;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 1px 5px;
+  font-size: 10px; }
