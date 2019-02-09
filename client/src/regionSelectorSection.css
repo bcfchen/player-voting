@@ -1,6 +1,13 @@
+.region-selector-container {
+  margin-left: auto;
+  margin-right: auto; }
+
 .region-selector-buttons-panel {
   display: grid;
-  grid-template-columns: auto auto; }
+  grid-template-columns: auto auto;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .region-button {
   width: 140px;
@@ -10,7 +17,9 @@
   color: #23292f;
   font-size: 12px;
   border-radius: 3px;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto; }
 
 .region-button-selected, .region-button:hover {
   width: 140px;

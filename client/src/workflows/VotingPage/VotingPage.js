@@ -40,8 +40,8 @@ class VotingPage extends React.Component {
         const titleText = this.props.isVotingEnded ? 'Results of voting for each region' 
         : 'Vote for players to represent your regions team';
 
-        return (<div className='main-page-container'>
-            <span>{titleText}</span>
+        return (<div className='voting-page-container'>
+            <div className='voting-page-title'><span>{titleText}</span></div>
             <RegionSelectorSection selectedRegion={this.props.selectedRegion} regions={REGIONS} onRegionSelected={this.onRegionSelected} isVotingEnded={this.props.isVotingEnded}/>
             <PlayersGrid players={this.props.players} 
             votedPlayers={this.props.votedPlayers}

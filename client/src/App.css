@@ -48,9 +48,16 @@ ul {
   padding: 1px 5px;
   font-size: 10px; }
 
+.region-selector-container {
+  margin-left: auto;
+  margin-right: auto; }
+
 .region-selector-buttons-panel {
   display: grid;
-  grid-template-columns: auto auto; }
+  grid-template-columns: auto auto;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .region-button {
   width: 140px;
@@ -60,7 +67,9 @@ ul {
   color: #23292f;
   font-size: 12px;
   border-radius: 3px;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto; }
 
 .region-button-selected, .region-button:hover {
   width: 140px;
@@ -71,6 +80,15 @@ ul {
   font-size: 12px;
   border-radius: 3px;
   font-weight: 700; }
+
+.voting-page-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.voting-page-container {
+  margin-top: 40px; }
 
 html {
   background-color: #2f353d; }
