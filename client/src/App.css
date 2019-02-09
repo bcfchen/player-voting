@@ -52,6 +52,26 @@ ul {
   display: grid;
   grid-template-columns: auto auto; }
 
+.region-button {
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #d8d8d8;
+  color: #23292f;
+  font-size: 12px;
+  border-radius: 3px;
+  font-weight: 700; }
+
+.region-button-selected, .region-button:hover {
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #ff7d08;
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
+  font-weight: 700; }
+
 html {
   background-color: #2f353d; }
 

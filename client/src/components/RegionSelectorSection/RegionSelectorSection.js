@@ -1,9 +1,13 @@
 import React from 'react';
 import RegionButton from '../RegionButton/RegionButton';
 
-const RegionSelectorSection = ({regions, onRegionSelected, isVotingEnded}) => {
+const RegionSelectorSection = ({selectedRegion, regions, onRegionSelected, isVotingEnded}) => {
     const buttons = regions
-    .map(region => <div key={region.id}  className='button-container'><RegionButton buttonText={region.name} onButtonClick={() => onRegionSelected(region.id)}/></div>);
+    .map(region => <div key={region.id} className='button-container'>
+        <RegionButton buttonText={region.name} 
+        onButtonClick={() => onRegionSelected(region.id)}
+        isSelected={region.id === selectedRegion}/>
+    </div>);
     
     return (<div className='region-selector-container'>
         <span>Select your region to browser players.</span>

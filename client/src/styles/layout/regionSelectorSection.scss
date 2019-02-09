@@ -3,3 +3,28 @@
     grid-template-columns: auto auto;
 }
 
+.region-button {
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgb(216, 216, 216);
+    color: rgb(35, 41, 47);
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+.region-button:hover {
+    @extend .region-button-selected;
+}
+
+.region-button-selected {
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgb(255, 125, 8);
+    color: white;
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: 700;
+}

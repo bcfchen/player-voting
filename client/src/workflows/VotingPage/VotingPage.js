@@ -42,7 +42,7 @@ class VotingPage extends React.Component {
 
         return (<div className='main-page-container'>
             <span>{titleText}</span>
-            <RegionSelectorSection regions={REGIONS} onRegionSelected={this.onRegionSelected} isVotingEnded={this.props.isVotingEnded}/>
+            <RegionSelectorSection selectedRegion={this.props.selectedRegion} regions={REGIONS} onRegionSelected={this.onRegionSelected} isVotingEnded={this.props.isVotingEnded}/>
             <PlayersGrid players={this.props.players} 
             votedPlayers={this.props.votedPlayers}
             onTogglePlayerVote={this.onTogglePlayerVote} 
@@ -56,7 +56,7 @@ const mapStateToProps = (state, ownProps) => {
         players: state.votingPage.playersData,
         isAdmin: state.votingPage.isAdmin,
         isVotingEnded: state.votingPage.isVotingEnded,
-        selectRegion: state.votingPage.selectRegion,
+        selectedRegion: state.votingPage.selectedRegion,
         votedPlayers: state.votingPage.votedPlayers
     };
 }
