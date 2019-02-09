@@ -8,9 +8,15 @@ export default function votingPageReducer(state = initialState.ui.votingPage, ac
             newState = { ...state };
             newState.playersData = action.playersData;
             break;
-        case types.VOTE_FOR_PLAYER_COMPLETE:
+        case types.TOGGLE_PLAYER_VOTE_COMPLETE:
             newState = { ...state };
-            newState.votedPlayers.push(action.id);
+            if (state.votedPlayers.includes(action.id)){
+                // if player already voted, unvote the player
+                newState.votedPlayers = state.votedPlayers
+                .filter(votedPlayerId => votedPlayerId !== action.id);
+            } else {
+                newState.votedPlayers = [...state.votedPlayers, action.id];
+            }
             break;
         case types.END_VOTING_COMPLETE:
             newState = { ...state };

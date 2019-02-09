@@ -5,8 +5,8 @@ export const loadPlayersDataSuccess = playersData => {
     return { type: types.LOAD_PLAYERS_DATA_SUCCESS, playersData };
 };
 
-export const voteForPlayerComplete = id => {
-    return { type: types.VOTE_FOR_PLAYER_COMPLETE, id };
+export const togglePlayerVoteComplete = id => {
+    return { type: types.TOGGLE_PLAYER_VOTE_COMPLETE, id };
 };
 
 export const endVotingComplete = () => {
@@ -29,9 +29,9 @@ export const loadPlayersData = () => {
     };
 };
 
-export const voteForPlayer = (id) => {
+export const togglePlayerVote = (id) => {
     return (dispatch) => {
-        dispatch(voteForPlayerComplete(id));
+        dispatch(togglePlayerVoteComplete(id));
         return;
     };
 };

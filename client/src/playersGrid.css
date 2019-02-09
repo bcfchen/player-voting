@@ -1,5 +1,3 @@
-@import url(../node_modules/toastr/build/toastr.min.css);
-@import url(../node_modules/react-select/dist/react-select.css);
 .blurry {
   -webkit-filter: url(#blur-filter);
   filter: url(#blur-filter);
@@ -37,11 +35,3 @@ ul {
   filter: url(#blur-filter);
   -webkit-filter: blur(3px);
   filter: blur(3px); }
-
-html {
-  background-color: #2f353d; }
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #ededed; }

@@ -8,7 +8,7 @@ import PlayersGrid from '../../components/PlayersGrid/PlayersGrid';
 class VotingPage extends React.Component {
     constructor() {
         super();
-        this.onVoteForPlayer = this.onVoteForPlayer.bind(this);
+        this.onTogglePlayerVote = this.onTogglePlayerVote.bind(this);
         this.onToggleAdmimMode = this.onToggleAdmimMode.bind(this);
         this.onEndVoting = this.onEndVoting.bind(this);
         this.onRegionSelected = this.onRegionSelected.bind(this);
@@ -19,8 +19,8 @@ class VotingPage extends React.Component {
     }
 
     // handlers
-    onVoteForPlayer(id) {
-        this.props.votingPageActions.voteForPlayer(id);
+    onTogglePlayerVote(id) {
+        this.props.votingPageActions.togglePlayerVote(id);
     }
 
     onToggleAdmimMode(isAdmin){
@@ -42,7 +42,10 @@ class VotingPage extends React.Component {
         return (<div className='main-page-container'>
             <span>{titleText}</span>
             <RegionSelectorSection onRegionSelected={this.onRegionSelected} isVotingEnded={this.props.isVotingEnded}/>
-            <PlayersGrid players={this.props.players} onVoteForPlayer={this.onVoteForPlayer} isVotingEnded={this.props.isVotingEnded}/>
+            <PlayersGrid players={this.props.players} 
+            votedPlayers={this.props.votedPlayers}
+            onTogglePlayerVote={this.onTogglePlayerVote} 
+            isVotingEnded={this.props.isVotingEnded}/>
         </div>);
     }
 };
@@ -52,7 +55,8 @@ const mapStateToProps = (state, ownProps) => {
         players: state.votingPage.playersData,
         isAdmin: state.votingPage.isAdmin,
         isVotingEnded: state.votingPage.isVotingEnded,
-        selectRegion: state.votingPage.selectRegion
+        selectRegion: state.votingPage.selectRegion,
+        votedPlayers: state.votingPage.votedPlayers
     };
 }
 
