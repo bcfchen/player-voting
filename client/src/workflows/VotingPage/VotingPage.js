@@ -4,6 +4,7 @@ import * as votingPageActions from "../../redux/actions/votingPageActions";
 import { bindActionCreators } from "redux";
 import RegionSelectorSection from '../../components/RegionSelectorSection/RegionSelectorSection';
 import PlayersGrid from '../../components/PlayersGrid/PlayersGrid';
+const REGIONS = [{id: 'jp', name: 'Japan'}, {id: 'zh', name: 'China'}];
 
 class VotingPage extends React.Component {
     constructor() {
@@ -41,7 +42,7 @@ class VotingPage extends React.Component {
 
         return (<div className='main-page-container'>
             <span>{titleText}</span>
-            <RegionSelectorSection onRegionSelected={this.onRegionSelected} isVotingEnded={this.props.isVotingEnded}/>
+            <RegionSelectorSection regions={REGIONS} onRegionSelected={this.onRegionSelected} isVotingEnded={this.props.isVotingEnded}/>
             <PlayersGrid players={this.props.players} 
             votedPlayers={this.props.votedPlayers}
             onTogglePlayerVote={this.onTogglePlayerVote} 

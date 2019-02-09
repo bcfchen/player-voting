@@ -1,12 +1,14 @@
 import React from 'react';
-import ButtonsPanel from '../ButtonsPanel/ButtonsPanel';
-import { selectRegion } from '../../redux/actions/votingPageActions';
+import RegionButton from '../RegionButton/RegionButton';
 
 const RegionSelectorSection = ({regions, onRegionSelected, isVotingEnded}) => {
+    const buttons = regions
+    .map(region => <div key={region.id}  className='button-container'><RegionButton buttonText={region.name} onButtonClick={() => onRegionSelected(region.id)}/></div>);
+    
     return (<div className='region-selector-container'>
         <span>Select your region to browser players.</span>
         {isVotingEnded && <span>NOTE: You may only vote for one region.</span>}
-        <ButtonsPanel buttonTexts={regions} selectedButton={selectRegion} onButtonClick={onRegionSelected}/>
+        <div className='region-selector-buttons-panel'>{buttons} </div>
     </div>);
 };
 

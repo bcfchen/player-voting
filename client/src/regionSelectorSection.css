@@ -1,0 +1,3 @@
+.region-selector-buttons-panel {
+  display: grid;
+  grid-template-columns: auto auto; }

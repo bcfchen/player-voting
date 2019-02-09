@@ -48,6 +48,10 @@ ul {
   padding: 1px 5px;
   font-size: 10px; }
 
+.region-selector-buttons-panel {
+  display: grid;
+  grid-template-columns: auto auto; }
+
 html {
   background-color: #2f353d; }
 
