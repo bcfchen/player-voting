@@ -10,8 +10,8 @@ const PlayerCard = ({player, isVoted, allowMoreVotes, onPlayerClicked, isVotingE
             <span>5.48%</span>
         </div>}
         <img className={itemClass} src={player.avatarUrl} onClick={clickHandler} />
-        <span>{player.nickname}</span>
-        <p>{player.message}</p>
+        <div className='player-name'><span>{player.nickname}</span></div>
+        <div className='player-message'>{player.message}</div>
     </div>);
 };
 

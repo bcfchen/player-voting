@@ -4,12 +4,6 @@
   -webkit-filter: blur(3px);
   filter: blur(3px); }
 
-ul {
-  list-style: none;
-  display: grid;
-  margin: 0 0;
-  padding: 1rem; }
-
 .thumbnail-list img {
   background-color: white;
   display: block;
@@ -18,19 +12,13 @@ ul {
   -webkit-border-radius: 99em;
   border-radius: 99em;
   border: 5px solid #47515d;
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  margin: 10px auto 10px auto; }
 
 .thumbnail-list img:hover {
   transform: scale(1.1);
   transition-duration: 0.4s;
   border-color: #EDEDEB; }
-
-ul {
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  grid-gap: 4px; }
-  ul li {
-    grid-column: span 2;
-    grid-row: span 2; }
 
 .blurry {
   -webkit-filter: url(#blur-filter);

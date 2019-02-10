@@ -6,12 +6,12 @@
     filter: blur(3px);
   }
   
-  ul {
-      list-style: none;
-      display: grid;
-      margin: 0 0;
-      padding: 1rem;
-    }
+//   ul {
+//       list-style: none;
+//       display: grid;
+//       margin: 0 0;
+//       padding: 1rem;
+//     }
     
     .thumbnail-list img {
       background-color: white;
@@ -22,6 +22,7 @@
       border-radius: 99em;
       border: 5px solid rgb(71, 81, 93);
       box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+      margin: 10px auto 10px auto;
     }
   
     .thumbnail-list img:hover {
@@ -30,14 +31,14 @@
         border-color: #EDEDEB;
     }
     
-    ul { 
-      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-      grid-gap: 4px;
-      li {
-        grid-column: span 2;
-        grid-row: span 2;
-      }
-    }
+    // ul { 
+    //   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    //   grid-gap: 4px;
+    //   li {
+    //     grid-column: span 2;
+    //     grid-row: span 2;
+    //   }
+    // }
 
 
 .blurry {
