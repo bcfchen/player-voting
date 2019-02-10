@@ -10,7 +10,7 @@ const RegionSelectorSection = ({selectedRegion, regions, onRegionSelected, isVot
     </div>);
     
     return (<div className='region-selector-container'>
-        <span>Select your region to browser players.</span>
+        <div className='title'><span>Select your region to browser players.</span></div>
         {isVotingEnded && <span>NOTE: You may only vote for one region.</span>}
         <div className='region-selector-buttons-panel'>{buttons} </div>
     </div>);

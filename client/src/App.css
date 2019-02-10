@@ -51,15 +51,16 @@ ul {
 .region-selector-container {
   margin-left: auto;
   margin-right: auto; }
+  .region-selector-container .title {
+    padding: 5px 0 5px 0; }
 
 .region-selector-buttons-panel {
   display: grid;
-  grid-template-columns: auto auto;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto; }
+  grid-template-columns: auto auto auto auto;
+  width: 680px;
+  margin: 10px auto 10px auto; }
 
-.region-button {
+.region-button, .region-button-selected, .region-button:hover {
   width: 140px;
   height: 30px;
   line-height: 30px;
@@ -72,14 +73,8 @@ ul {
   margin-right: auto; }
 
 .region-button-selected, .region-button:hover {
-  width: 140px;
-  height: 30px;
-  line-height: 30px;
   background-color: #ff7d08;
-  color: white;
-  font-size: 12px;
-  border-radius: 3px;
-  font-weight: 700; }
+  color: white; }
 
 .voting-page-title {
   font-size: 30px;

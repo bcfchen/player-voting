@@ -1,11 +1,11 @@
 export const playersData = [
     {
-        teams: 'zh',
+        teams: 'tw',
         participantId: '5a73dbd603343b0dsfgsdfg',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Dwalin',
         message: '人生就像爐石，有快慢之分',
-        country: 'jp',
+        country: 'tw',
         likes: 44
     },
     {
@@ -18,12 +18,12 @@ export const playersData = [
         likes: 43
     },
     {
-        teams: 'es',
+        teams: 'tw',
         participantId: 'd5d603343b0bbbfdfb',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Thrain',
         message: "百萬象迷站出來!!!(最好成績大概是2018年二月賽季亞服#1)",
-        country: 'jp',
+        country: 'tw',
         likes: 321
     },
     {
@@ -36,16 +36,16 @@ export const playersData = [
         likes: 231
     },
     {
-        teams: 'zh',
+        teams: 'jp',
         participantId: '5a3333389dd5d603343b0gdfdgfd',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Borin',
         message: "勝つために全力で戦います。投票よろしくお願いします。",
-        country: 'zh',
+        country: 'jp',
         likes: 433
     },
     {
-        teams: 'zh',
+        teams: 'jp',
         participantId: '54222222dsasd89dd5d603343b0rtgrt',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Ori',
@@ -54,7 +54,7 @@ export const playersData = [
         likes: 23
     },
     {
-        teams: 'zh',
+        teams: 'jp',
         participantId: 'aaaasd333389dd5d603343b0vvbbgg',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Bombur',
@@ -63,7 +63,7 @@ export const playersData = [
         likes: 52
     },
     {
-        teams: 'zh',
+        teams: 'jp',
         participantId: 'fsd3334549dd5d603343b0zxzxzxx',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Bifur',
@@ -72,7 +72,7 @@ export const playersData = [
         likes: 43
     },
     {
-        teams: 'zh',
+        teams: 'jp',
         participantId: 'sdf23339dd5d603343b0xcvx',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Girith',
@@ -81,7 +81,7 @@ export const playersData = [
         likes: 12
     },
     {
-        teams: 'zh',
+        teams: 'jp',
         participantId: 'sdf32222e589dd5d603343b0ascsasascc',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Maer',
@@ -95,52 +95,52 @@ export const playersData = [
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Hadlath',
         message: "To achieve my dream of being a better player! To inspire other players to achieve their dreams! Trying is the first step!",
-        country: 'jp',
+        country: 'zh',
         likes: 322
     },
     {
-        teams: 'zh',
+        teams: 'sea',
         participantId: 'sdf233451222589dd5d603343b0dsf',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Duimben',
         message: "I cast hard and I tryhard while balancing a working life. Your Average Joe with above average goals",
-        country: 'jp',
+        country: 'sea',
         likes: null
     },
     {
-        teams: 'zh',
+        teams: 'sea',
         participantId: 'sdf324523589dd5d603343b0asdfas',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Hador',
         message: "Suuuuuper washed up Hearthstone player from the Philippines. I hate losing more than I like winning. Please vote so I can make SEA great again. :D",
-        country: 'jp',
+        country: 'sea',
         likes: 111
     },
     {
-        teams: 'zh',
+        teams: 'sea',
         participantId: 'sdf3245222289dd5d603343b0dfsd',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Brandybuck',
         message: "Asian Games 2018 Hearthstone Bronze medalist, Priest/Paladin expert at TempoStorm snapshot.",
-        country: 'jp',
+        country: 'sea',
         likes: 22
     },
     {
-        teams: 'zh',
+        teams: 'sea',
         participantId: '234asddddbe589dd5d603343b0ssa',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Gerontius',
         message: "2nd Tavern Hero Qualifier Indonesia. My deck : Tempo Mage, Secret Hunter, Big Spell Mage, Even Warlock.",
-        country: 'jp',
+        country: 'sea',
         likes: 5
     },
     {
-        teams: 'zh',
+        teams: 'sea',
         participantId: '234asssse589dd5d60aaa3343b0xcvxc',
         avatarUrl: 'https://cdn.dekki.com/uploads/users/5a7483dbe589dd5d603343b0/avatar/original',
         nickname: 'Fallohide',
         message: "The best/luckiest hearthstone player in SEA",
-        country: 'jp',
+        country: 'sea',
         likes: 4
     },
 ];

@@ -4,7 +4,7 @@ import * as votingPageActions from "../../redux/actions/votingPageActions";
 import { bindActionCreators } from "redux";
 import RegionSelectorSection from '../../components/RegionSelectorSection/RegionSelectorSection';
 import PlayersGrid from '../../components/PlayersGrid/PlayersGrid';
-const REGIONS = [{id: 'jp', name: 'Japan'}, {id: 'zh', name: 'China'}];
+const REGIONS = [{id: 'jp', name: 'Japan'}, {id: 'zh', name: 'China'}, {id: 'tw', name: 'Taiwan'}, {id: 'sea', name: 'Southeast Asia'}];
 
 class VotingPage extends React.Component {
     constructor() {
@@ -39,12 +39,13 @@ class VotingPage extends React.Component {
     render() {
         const titleText = this.props.isVotingEnded ? 'Results of voting for each region' 
         : 'Vote for players to represent your regions team';
-
+        const playersForRegion = this.props.selectedRegion ? this.props.players.filter(player => player.teams === this.props.selectedRegion) : [];
+        const votedPlayersForRegion = this.props.selectedRegion ? this.props.votedPlayers.filter(player => playersForRegion.map(playerForRegion => playerForRegion.participantId).includes(player)) : [];
         return (<div className='voting-page-container'>
             <div className='voting-page-title'><span>{titleText}</span></div>
             <RegionSelectorSection selectedRegion={this.props.selectedRegion} regions={REGIONS} onRegionSelected={this.onRegionSelected} isVotingEnded={this.props.isVotingEnded}/>
-            <PlayersGrid players={this.props.players} 
-            votedPlayers={this.props.votedPlayers}
+            <PlayersGrid players={playersForRegion} 
+            votedPlayers={votedPlayersForRegion}
             onTogglePlayerVote={this.onTogglePlayerVote} 
             isVotingEnded={this.props.isVotingEnded}/>
         </div>);
