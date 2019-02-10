@@ -15,7 +15,7 @@
       }
 
       img:hover {
-        transform: scale(1.1);
+        transform: scale(1.03);
         transition-duration: 0.4s;
         border-color: #EDEDEB;
     }
@@ -29,7 +29,7 @@
     padding: 1px 5px;
     font-size: 10px;
     position:absolute;
-    transform: translateY(-5px) translateX(-16px);
+    transform: translateY(5px) translateX(-16px);
     z-index: 2;
 }
 
