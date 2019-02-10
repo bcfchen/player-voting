@@ -1,8 +1,24 @@
 .player-card-container {
     width: 160px;
-    // img {
-    //     margin: 10px 0 10px 0;
-    // }
+    padding: 5px;
+    margin-top: 10px;
+    img {
+        background-color: white;
+        display: block;
+          height: 80px;
+          width: 80px;
+        -webkit-border-radius: 99em;
+        border-radius: 99em;
+        border: 5px solid rgb(71, 81, 93);
+        box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+        margin: 10px auto 10px auto;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+        transition-duration: 0.4s;
+        border-color: #EDEDEB;
+    }
 }
 
 .voting-percent-indicator {

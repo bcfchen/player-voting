@@ -4,24 +4,17 @@
   -webkit-filter: blur(3px);
   filter: blur(3px); }
 
-.thumbnail-list img {
-  background-color: white;
-  display: block;
-  height: 80px;
-  width: 80px;
-  -webkit-border-radius: 99em;
-  border-radius: 99em;
-  border: 5px solid #47515d;
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
-  margin: 10px auto 10px auto; }
+.players-grid-wrapper {
+  display: flex;
+  justify-content: center; }
 
-.thumbnail-list img:hover {
-  transform: scale(1.1);
-  transition-duration: 0.4s;
-  border-color: #EDEDEB; }
+.players-grid {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center; }
 
-.blurry {
-  -webkit-filter: url(#blur-filter);
-  filter: url(#blur-filter);
-  -webkit-filter: blur(3px);
-  filter: blur(3px); }
+.placeholder-card {
+  width: 170px; }
