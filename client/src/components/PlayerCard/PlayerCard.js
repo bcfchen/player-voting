@@ -1,9 +1,9 @@
 import React from 'react';
-const PlayerCard = ({player, isVoted, allowMoreVotes, onPlayerClicked, isVotingEnded}) => {
+const PlayerCard = ({ player, isVoted, allowMoreVotes, onPlayerClicked, isVotingEnded }) => {
     const itemClass = isVoted ? "blurry" : "";
     const shoulDisableClick = isVotingEnded || (!allowMoreVotes && !isVoted);
-    const clickHandler = shoulDisableClick? undefined 
-    : () => onPlayerClicked(player.participantId);
+    const clickHandler = shoulDisableClick ? undefined
+        : () => onPlayerClicked(player.participantId);
 
     return (<div className='player-card-container'>
         {!isVotingEnded && <div className='voting-percent-indicator'>

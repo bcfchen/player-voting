@@ -10,10 +10,10 @@ export default function votingPageReducer(state = initialState.ui.votingPage, ac
             break;
         case types.TOGGLE_PLAYER_VOTE_COMPLETE:
             newState = { ...state };
-            if (state.votedPlayers.includes(action.id)){
+            if (state.votedPlayers.includes(action.id)) {
                 // if player already voted, unvote the player
                 newState.votedPlayers = state.votedPlayers
-                .filter(votedPlayerId => votedPlayerId !== action.id);
+                    .filter(votedPlayerId => votedPlayerId !== action.id);
             } else {
                 newState.votedPlayers = [...state.votedPlayers, action.id];
             }

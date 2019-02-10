@@ -13,7 +13,7 @@ export const endVotingComplete = () => {
     return { type: types.END_VOTING_COMPLETE };
 };
 
-export const toggleAdminModeComplete= (isAdmin) => {
+export const toggleAdminModeComplete = (isAdmin) => {
     return { type: types.TOGGLE_ADMIN_MODE_COMPLETE, isAdmin };
 };
 
