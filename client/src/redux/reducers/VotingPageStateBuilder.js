@@ -29,14 +29,24 @@ class VotingPageStateBuilder {
     // private methods
     __calculateIsPlayerTopThree(targetPlayer, playersData) {
         const playersWithMoreVotes = playersData
-            .filter(playerData => playerData.team === targetPlayer.team && playerData.likes > targetPlayer.likes);
+            .filter(playerData => playerData.teams === targetPlayer.teams && playerData.likes > targetPlayer.likes);
         return playersWithMoreVotes < 3;
+    }
+
+    __calculatePlayerVotePercent(targetPlayer, playersData) {
+        const allPlayersInRegion = playersData.filter(playerData => playerData.teams === targetPlayer.teams);
+        const totalLikes = allPlayersInRegion.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue.likes;
+        }, 0);
+        return (targetPlayer.likes / totalLikes * 100).toFixed(2);
     }
 
     build() {
         this.state.playersData.forEach(player => {
             const isTopThreeInRegion = this.__calculateIsPlayerTopThree(player, this.state.playersData);
+            const playerVotePercent = this.__calculatePlayerVotePercent(player, this.state.playersData);
             player.setIsTopThreeInRegion(isTopThreeInRegion);
+            player.setVotePercent(playerVotePercent);
         });
 
         return this.state;

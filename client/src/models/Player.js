@@ -9,6 +9,11 @@ class Player {
         this.likes = properties.likes;
         this.isVoted = false; // this is default value
         this.isTopThreeInRegion = false;
+        this.votePercent = 0;
+    }
+
+    setVotePercent(votePercent) {
+        this.votePercent = votePercent;
     }
 
     setIsVoted(isVoted) {
