@@ -27,3 +27,4 @@ src/**/App.css
 test-report.html
 package-lock.json
 .vscode
+*.css

@@ -67,7 +67,6 @@ class VotingPage extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        players: state.votingPage.playersData,
         isAdminMode: state.votingPage.isAdminMode,
         isVotingEnded: state.votingPage.isVotingEnded,
         selectedRegionId: state.votingPage.selectedRegionId,
