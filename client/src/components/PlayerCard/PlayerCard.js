@@ -1,6 +1,9 @@
 import React from 'react';
 const PlayerCard = ({ player, allowMoreVotes, onPlayerClicked, isVotingEnded }) => {
-    const playerImageClass = player.isVoted ? 'player-image-highlight' : 'player-image';
+    let playerImageClass = player.isVoted ? 'player-image-highlight' : 'player-image';
+    if (!player.isVoted && allowMoreVotes) {
+        playerImageClass += ' allow-hover';
+    }
     const votingPercentIndicatorClass = player.isVoted ? 'voting-percent-indicator-highlight' : 'voting-percent-indicator';
     const shoulDisableClick = isVotingEnded || (!allowMoreVotes && !player.isVoted);
     const clickHandler = shoulDisableClick ? undefined

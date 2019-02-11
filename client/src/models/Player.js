@@ -12,10 +12,6 @@ class Player {
         this.votePercent = 0;
     }
 
-    shouldHighight(isVotingEnded) {
-        return isVotingEnded ? this.isTopThreeInRegion : this.isVoted;
-    }
-
     setVotePercent(votePercent) {
         this.votePercent = votePercent;
     }
@@ -27,10 +23,6 @@ class Player {
         } else {
             this.likes--;
         }
-    }
-
-    setIsTopThreeInRegion(isTopThreeInRegion) {
-        this.isTopThreeInRegion = isTopThreeInRegion;
     }
 }
 

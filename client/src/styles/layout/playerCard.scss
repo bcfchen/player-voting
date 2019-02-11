@@ -16,7 +16,7 @@
     margin: 10px auto 10px auto;
 }
 
-.player-image:hover {
+.allow-hover:hover {
     transform: scale(1.03);
     transition-duration: 0.4s;
     border-color: #EDEDEB;
@@ -24,12 +24,6 @@
 
 .player-image-highlight {
     @extend .player-image;
-    border-color: rgb(255, 125, 8);
-}
-
-.player-image-highlight:hover {
-    transform: scale(1.00);
-    transition-duration: 0.4s;
     border-color: rgb(255, 125, 8);
 }
 
@@ -59,6 +53,7 @@
     padding: 1px 5px;
     font-size: 10px;
     position:absolute;
+    transition-duration: 0.4s;
     transform: translateY(-20px) translateX(-34px);
     z-index: 2;
 }

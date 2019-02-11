@@ -3,19 +3,19 @@
   background: linear-gradient(180deg, #ffab40, #ff9100);
   height: 30px;
   line-height: 30px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  text-align: left; }
 
 .navbar a {
   float: left;
   font-size: 16px;
   color: black;
-  text-align: center;
   text-decoration: none; }
 
 .dropdown {
   float: right;
   overflow: hidden;
-  width: 110px;
+  width: 120px;
   border-left: 1px solid #ba6108; }
 
 .dropdown:hover {
@@ -30,13 +30,13 @@
   font-family: inherit;
   font-weight: 700;
   margin: 0;
-  padding: 0 5px 0 5px; }
+  padding: 0 10px 0 10px; }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #ff7d08;
-  width: 110px;
+  width: 120px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1; }
 
@@ -47,8 +47,10 @@
   font-weight: 700;
   text-decoration: none;
   display: block;
-  text-align: left;
   border-top: 1px solid #ba6108; }
+
+.dropdown-content a span {
+  padding: 0 10px 0 10px; }
 
 .dropdown-content a:hover {
   background-color: #ffab40; }

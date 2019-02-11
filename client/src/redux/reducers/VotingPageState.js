@@ -24,6 +24,15 @@ class VotingPageState {
         this.isAdminMode = isAdminMode;
     }
 
+    clearVotedPlayers() {
+        this.votedPlayers = [];
+        this.playersData.forEach(player => {
+            if (player.isVoted) {
+                player.setIsVoted(false);
+            }
+        });
+    }
+
     togglePlayerVote(toggledPlayerId) {
         const existingVotedPlayers = [...this.votedPlayers];
         const toggledPlayer = this.playersData.find(player => player.participantId === toggledPlayerId);

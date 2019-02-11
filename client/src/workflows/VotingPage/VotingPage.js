@@ -43,14 +43,15 @@ class VotingPage extends React.Component {
             : 'Vote for players to represent your regions team';
         const playersForRegion = this.props.selectedRegion ? this.props.players.filter(player => player.teams === this.props.selectedRegion) : [];
         const votedPlayersForRegion = this.props.selectedRegion ? this.props.votedPlayers.filter(player => playersForRegion.map(playerForRegion => playerForRegion.participantId).includes(player)) : [];
-        const toggleAdminButtonText = this.props.isAdminMode ? 'Regular user mode' : 'Admin mode';
+        const votesRemaining = 3 - votedPlayersForRegion.length;
+
         for (let ii = 0; ii <= 8; ii++) {
             playersForRegion.push(new Player({ participantId: '' }));
         }
         return (<div className='voting-page-container'>
             <NavigationBar isAdminMode={this.props.isAdminMode} onSwitchUser={this.onToggleAdmimMode} onEndVoting={this.onEndVoting} />
             <div className='voting-page-title'><span>{titleText}</span></div>
-            <RegionSelectorSection selectedRegion={this.props.selectedRegion}
+            <RegionSelectorSection votesRemaining={votesRemaining} selectedRegion={this.props.selectedRegion}
                 regions={REGIONS} onRegionSelected={this.onRegionSelected}
                 isVotingEnded={this.props.isVotingEnded} />
             <PlayersGrid players={playersForRegion}

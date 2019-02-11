@@ -1,8 +1,10 @@
 .region-selector-container {
   margin-left: auto;
   margin-right: auto; }
-  .region-selector-container .title {
+  .region-selector-container .description {
     padding: 5px 0 5px 0; }
+  .region-selector-container .gray-text {
+    color: gray; }
 
 .region-selector-buttons-panel {
   display: flex;

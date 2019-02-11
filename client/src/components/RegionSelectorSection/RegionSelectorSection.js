@@ -1,7 +1,7 @@
 import React from 'react';
 import RegionButton from '../RegionButton/RegionButton';
 
-const RegionSelectorSection = ({ selectedRegion, regions, onRegionSelected, isVotingEnded }) => {
+const RegionSelectorSection = ({ votesRemaining, selectedRegion, regions, onRegionSelected, isVotingEnded }) => {
     const buttons = regions
         .map(region => <div key={region.id} className='button-container'>
             <RegionButton buttonText={region.name}
@@ -9,14 +9,14 @@ const RegionSelectorSection = ({ selectedRegion, regions, onRegionSelected, isVo
                 isSelected={region.id === selectedRegion} />
         </div>);
 
+    const selectedRegionName = selectedRegion ? regions.find(region => region.id === selectedRegion).name : undefined;
     return (<div className='region-selector-container'>
-        <div className='title'><span>Select your region to browser players.</span></div>
-        {!isVotingEnded && <span>NOTE: You may only vote for one region.</span>}
+        <div className='description'><span>Select your region to browser players.</span></div>
+        {!isVotingEnded && <div className='description'><span>NOTE: You may only vote for one region.</span></div>}
         <div className='region-selector-buttons-panel'>{buttons} </div>
-        {!isVotingEnded && <span>Click on up to 3 Players to place your votes.</span>}
-
-        {!isVotingEnded && <span>The remaining of your votes must be for {selectedRegion}</span>}
-        {isVotingEnded && <span>The top 3 vote earners in each region make up that region's team.</span>}
+        {!isVotingEnded && <div className='description'><span>Click on up to 3 Players to place your votes. </span><span className='gray-text'>({votesRemaining} votes remaining)</span></div>}
+        {!isVotingEnded && selectedRegionName && <div className='description'><span>The remaining of your votes must be for {selectedRegionName}.</span></div>}
+        {isVotingEnded && <div className='description'><span>The top 3 vote earners in each region make up that region's team.</span></div>}
     </div>);
 };
 
