@@ -58,7 +58,7 @@ class VotingPage extends React.Component {
                 regions={regions} onRegionSelected={this.onRegionSelected}
                 isVotingEnded={this.props.isVotingEnded} />
             <PlayersGrid players={this.props.playersInRegion}
-                votedPlayers={this.props.votedPlayers}
+                votesRemaining={votesRemaining}
                 onTogglePlayerVote={this.onTogglePlayerVote}
                 isVotingEnded={this.props.isVotingEnded} />
         </div>);
