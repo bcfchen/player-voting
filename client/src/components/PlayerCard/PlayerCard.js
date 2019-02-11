@@ -1,13 +1,10 @@
 import React from 'react';
 const PlayerCard = ({ player, allowMoreVotes, onPlayerClicked, isVotingEnded }) => {
-    let playerImageClass = player.isVoted ? 'player-image-highlight' : 'player-image';
-    if (!player.isVoted && allowMoreVotes) {
-        playerImageClass += ' allow-hover';
-    }
+    const hoverClass = (!player.isVoted && allowMoreVotes && !isVotingEnded) ? ' allow-hover' : '';
+    const playerImageClass = player.isVoted ? 'player-image-highlight' : `player-image ${hoverClass}`;
     const votingPercentIndicatorClass = player.isVoted ? 'voting-percent-indicator-highlight' : 'voting-percent-indicator';
     const shoulDisableClick = isVotingEnded || (!allowMoreVotes && !player.isVoted);
-    const clickHandler = shoulDisableClick ? undefined
-        : () => onPlayerClicked(player.participantId);
+    const clickHandler = shoulDisableClick ? undefined : () => onPlayerClicked(player.participantId);
 
     return (<div className='player-card-container'>
         {isVotingEnded && <div className={votingPercentIndicatorClass}>

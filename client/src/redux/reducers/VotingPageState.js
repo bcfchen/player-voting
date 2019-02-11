@@ -1,11 +1,12 @@
 
 class VotingPageState {
     constructor(properties) {
-        this.selectedRegion = properties.selectedRegion;
+        this.selectedRegionId = properties.selectedRegionId;
         this.votedPlayers = properties.votedPlayers;
         this.playersData = properties.playersData;
         this.isVotingEnded = properties.isVotingEnded;
         this.isAdminMode = properties.isAdminMode;
+        this.playersInRegion = properties.playersInRegion;
     }
 
     setPlayersData(playersData) {
@@ -16,8 +17,12 @@ class VotingPageState {
         this.isVotingEnded = isVotingEnded;
     }
 
-    setSelectedRegion(selectedRegion) {
-        this.selectedRegion = selectedRegion;
+    updatePlayersInRegion(selectedRegionId) {
+        this.playersInRegion = this.playersData.filter(player => player.teams === selectedRegionId);
+    }
+
+    setSelectedRegionId(selectedRegionId) {
+        this.selectedRegionId = selectedRegionId;
     }
 
     setIsAdminMode(isAdminMode) {
@@ -26,6 +31,7 @@ class VotingPageState {
 
     clearVotedPlayers() {
         this.votedPlayers = [];
+        // reset players' vote count if player was previously voted by user
         this.playersData.forEach(player => {
             if (player.isVoted) {
                 player.setIsVoted(false);

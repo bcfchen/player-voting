@@ -6,7 +6,7 @@ import RegionSelectorSection from '../../components/RegionSelectorSection/Region
 import PlayersGrid from '../../components/PlayersGrid/PlayersGrid';
 import Player from '../../models/Player';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
-const REGIONS = [{ id: 'jp', name: 'Japan' }, { id: 'zh', name: 'China' }, { id: 'tw', name: 'Taiwan' }, { id: 'sea', name: 'South East Asia' }];
+import { regions } from '../../api/data/regionsData';
 
 class VotingPage extends React.Component {
     constructor() {
@@ -41,21 +41,24 @@ class VotingPage extends React.Component {
     render() {
         const titleText = this.props.isVotingEnded ? 'Results of voting for each region'
             : 'Vote for players to represent your regions team';
-        const playersForRegion = this.props.selectedRegion ? this.props.players.filter(player => player.teams === this.props.selectedRegion) : [];
-        const votedPlayersForRegion = this.props.selectedRegion ? this.props.votedPlayers.filter(player => playersForRegion.map(playerForRegion => playerForRegion.participantId).includes(player)) : [];
-        const votesRemaining = 3 - votedPlayersForRegion.length;
+        const votesRemaining = 3 - this.props.votedPlayers.length;
 
-        for (let ii = 0; ii <= 8; ii++) {
-            playersForRegion.push(new Player({ participantId: '' }));
+        // this is to add some placeholder cards to deal with flexbox limitation
+        for (let ii = 0; ii < 8; ii++) {
+            this.props.playersInRegion.push(new Player({ participantId: '' }));
         }
+
         return (<div className='voting-page-container'>
-            <NavigationBar isAdminMode={this.props.isAdminMode} onSwitchUser={this.onToggleAdmimMode} onEndVoting={this.onEndVoting} />
+            <NavigationBar isAdminMode={this.props.isAdminMode}
+                onSwitchUser={this.onToggleAdmimMode}
+                onEndVoting={this.onEndVoting} />
             <div className='voting-page-title'><span>{titleText}</span></div>
-            <RegionSelectorSection votesRemaining={votesRemaining} selectedRegion={this.props.selectedRegion}
-                regions={REGIONS} onRegionSelected={this.onRegionSelected}
+            <RegionSelectorSection votesRemaining={votesRemaining}
+                selectedRegionId={this.props.selectedRegionId}
+                regions={regions} onRegionSelected={this.onRegionSelected}
                 isVotingEnded={this.props.isVotingEnded} />
-            <PlayersGrid players={playersForRegion}
-                votedPlayers={votedPlayersForRegion}
+            <PlayersGrid players={this.props.playersInRegion}
+                votedPlayers={this.props.votedPlayers}
                 onTogglePlayerVote={this.onTogglePlayerVote}
                 isVotingEnded={this.props.isVotingEnded} />
         </div>);
@@ -67,8 +70,9 @@ const mapStateToProps = (state, ownProps) => {
         players: state.votingPage.playersData,
         isAdminMode: state.votingPage.isAdminMode,
         isVotingEnded: state.votingPage.isVotingEnded,
-        selectedRegion: state.votingPage.selectedRegion,
-        votedPlayers: state.votingPage.votedPlayers
+        selectedRegionId: state.votingPage.selectedRegionId,
+        votedPlayers: state.votingPage.votedPlayers,
+        playersInRegion: state.votingPage.playersInRegion
     };
 }
 

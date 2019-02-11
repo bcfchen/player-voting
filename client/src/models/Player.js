@@ -18,11 +18,7 @@ class Player {
 
     setIsVoted(isVoted) {
         this.isVoted = isVoted;
-        if (this.isVoted) {
-            this.likes++;
-        } else {
-            this.likes--;
-        }
+        this.isVoted ? this.likes++ : this.likes--;
     }
 }
 

@@ -3,7 +3,7 @@ import initialState from './initialState';
 import VotingPageStateBuilder from './VotingPageStateBuilder';
 
 export default function votingPageReducer(state = initialState.ui.votingPage, action) {
-    let newState, builder = (new VotingPageStateBuilder).init({ ...state });
+    let newState, builder = new VotingPageStateBuilder().init({ ...state });
     switch (action.type) {
         case types.LOAD_PLAYERS_DATA_SUCCESS:
             builder.withPlayersData(action.playersData);

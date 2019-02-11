@@ -1,13 +1,13 @@
 const initialState = {
 	ui: {
 		votingPage: {
-			selectedRegion: undefined,
+			selectedRegionId: undefined,
 			votedPlayers: [],
 			playersData: [],
 			isVotingEnded: false,
 			isAdminMode: false,
-		},
-		ajaxCallsInProgress: 0
+			playersInRegion: []
+		}
 	},
 	server: {}
 };

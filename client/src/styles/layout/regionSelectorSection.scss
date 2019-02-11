@@ -32,12 +32,12 @@
     margin: 5px 10px 5px 10px;
 }
 
-.region-button:hover {
-    @extend .region-button-selected;
-}
-
 .region-button-selected {
     @extend .region-button;
     background-color: rgb(255, 125, 8);
     color: white;
+}
+
+.region-button:hover {
+    @extend .region-button-selected;
 }
