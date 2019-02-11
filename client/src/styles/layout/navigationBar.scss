@@ -62,6 +62,10 @@
     text-align: left;
     border-top: 1px solid #ba6108
   }
+
+  .dropdown-content a span {
+      padding: 0 5px 0 5px;
+  }
   
   .dropdown-content a:hover {
     background-color: #ffab40;
