@@ -26,21 +26,16 @@ class VotingPageState {
 
     togglePlayerVote(toggledPlayerId) {
         const existingVotedPlayers = [...this.votedPlayers];
+        const toggledPlayer = this.playersData.find(player => player.participantId === toggledPlayerId);
+
         if (existingVotedPlayers.includes(toggledPlayerId)) {
             this.votedPlayers = existingVotedPlayers
                 .filter(votedPlayerId => votedPlayerId !== toggledPlayerId);
+            toggledPlayer.setIsVoted(false);
         } else {
             this.votedPlayers = [...existingVotedPlayers, toggledPlayerId];
+            toggledPlayer.setIsVoted(true);
         }
-
-        this.playersData.forEach(player => {
-            const isPlayerVoted = this.votedPlayers.includes(player.participantId);
-            if (isPlayerVoted) {
-                player.setIsVoted(true);
-            } else {
-                player.setIsVoted(false);
-            }
-        });
     }
 }
 

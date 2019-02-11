@@ -2,22 +2,32 @@
   width: 160px;
   padding: 5px;
   margin-top: 10px; }
-  .player-card-container img {
-    background-color: white;
-    display: block;
-    height: 80px;
-    width: 80px;
-    -webkit-border-radius: 99em;
-    border-radius: 99em;
-    border: 5px solid #47515d;
-    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
-    margin: 10px auto 10px auto; }
-  .player-card-container img:hover {
-    transform: scale(1.03);
-    transition-duration: 0.4s;
-    border-color: #EDEDEB; }
 
-.voting-percent-indicator {
+.player-image, .player-image-highlight {
+  background-color: white;
+  display: block;
+  height: 80px;
+  width: 80px;
+  -webkit-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #47515d;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  margin: 10px auto 10px auto; }
+
+.player-image:hover, .player-image-highlight:hover {
+  transform: scale(1.03);
+  transition-duration: 0.4s;
+  border-color: #EDEDEB; }
+
+.player-image-highlight {
+  border-color: #ff7d08; }
+
+.player-image-highlight:hover {
+  transform: scale(1);
+  transition-duration: 0.4s;
+  border-color: #ff7d08; }
+
+.voting-percent-indicator, .voting-percent-indicator-highlight {
   background-color: #d8d8d8;
   color: black;
   border-radius: 3px;
@@ -25,7 +35,22 @@
   padding: 1px 5px;
   font-size: 10px;
   position: absolute;
-  transform: translateY(5px) translateX(-16px);
+  transform: translateY(5px) translateX(-18px);
+  z-index: 2; }
+
+.voting-percent-indicator-highlight {
+  color: white;
+  background-color: #ff7d08; }
+
+.your-selection-label {
+  color: white;
+  background-color: #ff7d08;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 1px 5px;
+  font-size: 10px;
+  position: absolute;
+  transform: translateY(-20px) translateX(-34px);
   z-index: 2; }
 
 .player-name {

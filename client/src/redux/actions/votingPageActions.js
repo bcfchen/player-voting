@@ -9,12 +9,12 @@ export const togglePlayerVoteComplete = id => {
     return { type: types.TOGGLE_PLAYER_VOTE_COMPLETE, id };
 };
 
-export const endVotingComplete = () => {
-    return { type: types.END_VOTING_COMPLETE };
+export const endVotingComplete = (isVotingEnded) => {
+    return { type: types.END_VOTING_COMPLETE, isVotingEnded };
 };
 
-export const toggleAdminModeComplete = (isAdmin) => {
-    return { type: types.TOGGLE_ADMIN_MODE_COMPLETE, isAdmin };
+export const toggleAdminModeComplete = (isAdminMode) => {
+    return { type: types.TOGGLE_ADMIN_MODE_COMPLETE, isAdminMode };
 };
 
 export const selectRegionComplete = (region) => {
@@ -36,9 +36,9 @@ export const togglePlayerVote = (id) => {
     };
 };
 
-export const endVoting = () => {
+export const endVoting = (isVotingEnded) => {
     return (dispatch) => {
-        dispatch(endVotingComplete());
+        dispatch(endVotingComplete(isVotingEnded));
         return;
     };
 };
@@ -50,9 +50,9 @@ export const selectRegion = (region) => {
     };
 };
 
-export const toggleAdminMode = (isAdmin) => {
+export const toggleAdminMode = (isAdminMode) => {
     return (dispatch) => {
-        dispatch(toggleAdminModeComplete(isAdmin));
+        dispatch(toggleAdminModeComplete(isAdminMode));
         return;
     };
 };

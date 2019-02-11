@@ -3,10 +3,13 @@
 @import "styles/layout/playersGrid.scss";
 @import "styles/layout/playerCard.scss";
 @import "styles/layout/regionSelectorSection.scss";
+@import "styles/layout/toggleAdminButton.scss";
 @import "styles/layout/votingPage.scss";
+@import "styles/layout/navigationBar.scss";
 
 html {
     background-color:#2f353d;
+
 }
 
 body {
@@ -14,4 +17,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: #ededed;
     text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }

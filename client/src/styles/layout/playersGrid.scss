@@ -1,11 +1,3 @@
-
-.blurry {
-    -webkit-filter: url(#blur-filter);
-    filter: url(#blur-filter);
-    -webkit-filter: blur(3px);
-    filter: blur(3px);
-  }
-
 .players-grid-wrapper {
     display: flex;
     justify-content: center;

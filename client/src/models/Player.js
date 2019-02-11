@@ -12,6 +12,10 @@ class Player {
         this.votePercent = 0;
     }
 
+    shouldHighight(isVotingEnded) {
+        return isVotingEnded ? this.isTopThreeInRegion : this.isVoted;
+    }
+
     setVotePercent(votePercent) {
         this.votePercent = votePercent;
     }
