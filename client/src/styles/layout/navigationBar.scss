@@ -20,23 +20,22 @@
     overflow: hidden;
     width: 120px;
     border-left: 1px solid #ba6108;
+
+    button {
+        font-size: 12px;
+        border: none;
+        outline: none;
+        color: black;
+        background-color: inherit;
+        font-family: inherit;
+        font-weight: 700;
+        margin: 0;
+        padding: 0 10px 0 10px;
+    }
   }
   
   .dropdown:hover {
     background-color: rgba(237, 237, 237, 237);
-  }
-
-  .dropdown .dropbtn {
-    font-size: 12px;
-    border: none;
-    outline: none;
-    color: black;
-    background-color: inherit;
-    font-family: inherit;
-    font-weight: 700;
-    margin: 0;
-    padding: 0 10px 0 10px;
-
   }
   
   .dropdown-content {

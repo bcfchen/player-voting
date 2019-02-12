@@ -14,7 +14,10 @@ class VotingPageStateBuilder {
     withSelectedRegion(selectedRegionId) {
         this.state.setSelectedRegionId(selectedRegionId);
         this.state.updatePlayersInRegion(selectedRegionId);
-        this.state.clearVotedPlayers();
+        // if voting in progress, clear voted players. if voting ended, dont clear
+        if (!this.state.isVotingEnded) {
+            this.state.clearVotedPlayers();
+        }
         return this;
     }
 
@@ -24,7 +27,9 @@ class VotingPageStateBuilder {
     }
 
     withIsAdminMode(isAdminMode) {
+        // switching between users (admin/regular) will clear voted players
         this.state.setIsAdminMode(isAdminMode);
+        this.state.clearVotedPlayers();
         return this;
     }
 
