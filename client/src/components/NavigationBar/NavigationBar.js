@@ -6,8 +6,8 @@ const NavigationBar = ({ onSwitchUser, isAdminMode, onEndVoting }) => {
         <div className="dropdown">
             <button>{switchUserDisplayText}</button>
             <div className="dropdown-content">
-                <a href="#" onClick={onSwitchUser}><span>Switch User</span></a>
-                {isAdminMode && <a href="#" onClick={onEndVoting}><span>Toggle End Voting</span></a>}
+                <a onClick={onSwitchUser}><span>Switch User</span></a>
+                {isAdminMode && <a onClick={onEndVoting}><span>Toggle End Voting</span></a>}
             </div>
         </div>
     </div>);

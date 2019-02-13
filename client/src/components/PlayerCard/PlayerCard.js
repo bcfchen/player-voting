@@ -10,7 +10,7 @@ const PlayerCard = ({ player, allowVote, onPlayerClicked, isVotingEnded }) => {
         {isVotingEnded && <div className={votingPercentIndicatorClass}>
             <span>{player.votePercent}%</span>
         </div>}
-        <img className={playerImageClass} src={player.avatarUrl} onClick={clickHandler} alt='image unavailable' />
+        <img className={playerImageClass} src={player.avatarUrl} onClick={clickHandler} alt='Loading...' />
         {player.isVoted && <div className='your-selection-label'>
             <span>Your selection</span>
         </div>}

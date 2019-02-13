@@ -4,7 +4,6 @@ import * as votingPageActions from "../../redux/actions/votingPageActions";
 import { bindActionCreators } from "redux";
 import RegionSelectorSection from '../../components/RegionSelectorSection/RegionSelectorSection';
 import PlayersGrid from '../../components/PlayersGrid/PlayersGrid';
-import Player from '../../models/Player';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import { regions } from '../../api/data/regionsData';
 
@@ -42,11 +41,6 @@ class VotingPage extends React.Component {
         const titleText = this.props.isVotingEnded ? 'Results of voting for each region'
             : 'Vote for players to represent your regions team';
         const votesRemaining = 3 - this.props.votedPlayers.length;
-
-        // this is to add some placeholder cards to deal with flexbox limitation
-        for (let ii = 0; ii < 8; ii++) {
-            this.props.playersInRegion.push(new Player({ participantId: '' }));
-        }
 
         return (<div className='voting-page-container'>
             <NavigationBar isAdminMode={this.props.isAdminMode}
